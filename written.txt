@@ -1,5 +1,9 @@
 ﻿Q3. What happens to the bounding boxes with update + fullRefit?
+It ends up never switchings its bounding box from the original pair. So the bounding box constantly grows as they grow apart.
 
 Q4. What happens with reset (rebuild every frame) instead?
+It rebuilds the bounding boxes and actually reconstructs the bounding box to better fit dynamically which one is the closest.
 
 Q5. Why are some circles drawn with their sides cut off?
+When spawned, it only allows pixels to be drawn in the window. Some circles that spawn close to the edges, with large enough radiuses have 
+their pixels cut off due to the edge of the screen. 
